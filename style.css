@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background: url('https://www.shutterstock.com/image-photo/amazing-nature-scenery-mountains-under-600nw-2325348577.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay on background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    height: 80vh; /* Occupy more vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+}
+
+.screen.active {
+    display: block;
+}
+
+.clock {
+    margin-bottom: 50px;
+}
+
+#time {
+    font-size: 8rem; /* Larger clock */
+    margin-bottom: 20px;
+}
+
+#date {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#todo-list {
+    margin-bottom: 20px;
+}
+
+#todo-list li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 1.5rem; /* Larger to-do list items */
+}
+
+#new-task {
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+nav button, button {
+    background-color: #3344DD;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover, button:hover {
+    background-color: #5566EE;
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+#timer-display {
+    font-size: 6rem;
+    margin-bottom: 30px;
+}
+
+audio {
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 3rem; /* Larger section titles */
+    margin-bottom: 30px;
+}
+
+/* Hover and transition effects */
+button, nav button {
+    transition: all 0.3s ease;
+}
+
+button:hover, nav button:hover {
+    transform: scale(1.05);
+}
+
+#lofi-music{
+    height: 55%;
+    width: 55%;
+}
+
+#todo-list {
+    margin-bottom: 20px;
+}
+
+#todo-list li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 1.5rem; /* Larger to-do list items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.delete-task {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-task:hover {
+    background-color: darkred;
+}

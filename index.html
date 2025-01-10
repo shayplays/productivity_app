@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikigai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen Section -->
+        <section id="home" class="screen active">
+            <div class="clock">
+                <div id="date"></div>
+                <div id="time"></div>
+                <p id="greeting">Hello, User!</p>
+            </div>
+            <nav>
+                <button onclick="showScreen('todo')">To-Do List</button>
+                <button onclick="showScreen('pomodoro')">Pomodoro Timer</button>
+                <button onclick="showScreen('music')">Lofi Beats</button>
+            </nav>
+        </section>
+
+        <!-- To-Do List Section -->
+        <div id="todo" class="screen">
+            <h2>To-Do List</h2>
+            <ul id="todo-list"></ul>
+            <input type="text" id="new-task" placeholder="New Task">
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="showScreen('home')">Back to Home</button>
+        </div>
+        
+
+        <!-- Pomodoro Timer Section -->
+        <section id="pomodoro" class="screen">
+            <h2>Pomodoro Timer</h2>
+            <div id="timer-display">25:00</div>
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+            <button onclick="showScreen('home')">Back to Home</button>
+        </section>
+
+        <!-- Music Player Section -->
+        <section id="music" class="screen">
+            <h2>Music Player</h2>
+            <video id="lofi-music" controls poster = "kupla-imaginary.jpg">
+                <source src="Y2meta.app - Kupla - Imaginary [full album] (192 kbps).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </video>
+            <button onclick="showScreen('home')">Back to Home</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
